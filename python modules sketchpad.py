@@ -175,42 +175,102 @@ Divided_Quotient_def = "Divided_Quotient: The divmod() function returns a tuple 
 # divmod()
 print(f"\n{Divided_Quotient_def},\n      divmod(5, 2) = {divmod(5, 2)}")
 
+
+
+Enumerate_def = "Enumerate: The enumerate() function takes a collection/tuple and returns it as an enumerate object. It adds a counter as the key of the enumerate object."
 # enumerate()
-# print(f"\n{},\n      {}")
-#
+Enumerate_x = ('apple', 'banana', 'cherry')
+Enumerate_y = enumerate(Enumerate_x)
+print(f"\n{Enumerate_def},\n      Enumerate_x = ('apple', 'banana', 'cherry')\n      Enumerate_y = enumerate(Enumerate_x)\n          list(Enumerate_y) = {list(Enumerate_y)}")
+
+
+
+Evaluation_def = "Evaluation:  The eval() function evaluates the specified expression, if the expression is a legal Python statement, it will be executed."
 # eval()
-# print(f"\n{},\n      {}")
-#
+Evaluation_x = 'print(55)'
+print(f"\n{Evaluation_def}")
+eval(Evaluation_x)
+
+
+
+Execution_def = "Execution: The exec() function executes the specified Python code. It accepts large blocks of code, unlike the eval() function which only accepts a single expression."
 # exec()
-# print(f"\n{},\n      {}")
-#
+Execution_x = 'name = "John"\nprint(name)'
+print(f"\n{Execution_def}")
+exec(Execution_x)
+
+
+
+Filter_def = "Filter: The filter() function returns an iterator where the items are filtered through a function to test if the item is accepted or not. "
 # filter()
-# print(f"\n{},\n      {}")
-#
+def Filter_starts_a(w):
+    return w.startswith("a")
+
+li = ["apple", "banana", "avocado", "cherry", "apricot"]
+res = filter(Filter_starts_a, li)
+
+print(f"\n{Filter_def},\n      def Filter_starts_a(w):\n                 return w.startswith('a')\n      li = ['apple', 'banana', 'avocado', 'cherry', 'apricot']\n      res = filter(Filter_starts_a, li)\n               = {list(res)}")
+
+
+
+Float_convert_def = "Float: The float() function converts the specified value into a floating point number. It can be a number or a string."
 # float()
-# print(f"\n{},\n      {}")
-#
+print(f"\n{Float_convert_def},\n      float(3) = {float(3)}\n      float('3.500') = {float('3.500')}")
+
+
+
+Format_def = "Format: The format() function formats a specified value into a specified format. Reference the Format list to see the many available formatting codes."
 # format()
-# print(f"\n{},\n      {}")
-#
+print(f"\n{Format_def},\n      format(0.5, '%') = {format(0.5, '%')}\n      format(255, 'x') = {format(255, 'x')}\n      format(1234567890, ',') = {format(1234567890, ',')}")
+
+
+
+FrozenSet_def = "Frozen Set: The frozenset() function returns an unchangeable frozenset object (which is like a set object, only unchangeable)"
 # frozenset()
-# print(f"\n{},\n      {}")
-#
+Frozen_mylist = ['apple', 'banana', 'cherry']
+print(f"\n{FrozenSet_def},\n      Frozen_mylist = ['apple', 'banana', 'cherry']\n           frozenset(Frozen_mylist) = {frozenset(Frozen_mylist)}")
+
+
+
+Get_Attribute_def = "Get Attribute: The getattr() function returns the value of the specified attribute from the specified object. A 3rd parameter can be added as a message to display if this does not exist"
 # getattr()
-# print(f"\n{},\n      {}")
-#
+class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+print(f"\n{Get_Attribute_def},\n      class Person:\n        name = 'John'\n        age = 36\n        country = 'Norway'\n             getattr(Person, 'age') = {getattr(Person, 'age')}\n             getattr(Person, 'weight', 'THIS DOES NOT EXIST') = {getattr(Person, 'weight', 'THIS DOES NOT EXIST')}")
+
+
+
+Globals_def = "Globals: The globals() function returns the global symbol table as a dictionary. A symbol table contains necessary information about the current program."
 # globals()
-# print(f"\n{},\n      {}")
-#
+print(f"\n{Globals_def},\n      globals() = {globals()}")
+
+
+
+Has_Attribute_def = "Has Attribute: the hasattr() function returns True if the specified object has the specified attribute, otherwise False."
 # hasattr()
-# print(f"\n{},\n      {}")
-#
+class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+print(f"\n{Has_Attribute_def},\n      class Person:\n        name = 'John'\n        age = 36\n        country = 'Norway'\n             hasattr(Person, 'age') = {hasattr(Person, 'age')}")
+
+
+
+Hash_def = "Hash: The hash() function in Python returns an integer hash value for an object"
 # hash()
-# print(f"\n{},\n      {}")
-#
+print(f"\n{Hash_def},\n      hash(10) = {hash(10)}\n      hash('python') = {hash('python')}")
+
+
+
+Help_def = "Help: help() function in Python is a built-in function that provides information about modules, classes and functions. "
 # help()
-# print(f"\n{},\n      {}")
-#
+
+print(f"\n{Help_def})")
+print("     Will take over the Run window")
+print(f"help() = {help()}\n      help(print) = {help(print)}")
+
 # hex()
 # print(f"\n{},\n      {}")
 #
