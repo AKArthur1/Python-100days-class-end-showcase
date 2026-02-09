@@ -210,7 +210,7 @@ print(f"\n{Float_convert_def},\n      float(3) = {float(3)}\n      float('3.500'
 
 Format_def = "Format: The format() function formats a specified value into a specified format. Reference the Format list to see the many available formatting codes."
 # format()
-print(f"\n{Format_def},\n      format(0.5, '%') = {format(0.5, '%')}\n      format(255, 'x') = {format(255, 'x')}\n      format(1234567890, ',') = {format(1234567890, ',')}")
+print(f"\n{Format_def},\n      format(0.5, '%') = {format(0.5, '%')}\n      format(255, 'L_Justified_x') = {format(255, 'L_Justified_x')}\n      format(1234567890, ',') = {format(1234567890, ',')}")
 
 
 
@@ -397,7 +397,7 @@ print(f"\n{Octal_convert_def},\n      oct(12) = {oct(12)}")
 
 
 
-Open_def = "Open: The open() function opens a file, and returns it as a file object. The Modes are 'r'-Read, 'a'-Append, 'w'-Write, 'x'-Create "
+Open_def = "Open: The open() function opens a file, and returns it as a file object. The Modes are 'r'-Read, 'a'-Append, 'w'-Write, 'L_Justified_x'-Create "
 # open()
 print(f"\n{Open_def},\n      *** This will open a file when run ***\n                  f = open('demofile.txt', 'r')\n                  print(f.read())")
 
@@ -406,12 +406,12 @@ print(f"\n{Open_def},\n      *** This will open a file when run ***\n           
 
 Ord_def = "Ord: The ord() function returns the number representing the unicode code of a specified character."
 # ord()
-print(f"\n{Ord_def},\n    ord('h') = {ord('h')}\n    ord('y') = {ord('y')}")
+print(f"\n{Ord_def},\n    ord('h') = {ord('h')}\n    ord('MakeTranslate_y') = {ord('MakeTranslate_y')}")
 
 
 
 
-PowerOf_def = "Power of: The pow() function returns the value of x to the power of y (x^y). If a third parameter is present, it returns x to the power of y, modulus z."
+PowerOf_def = "Power of: The pow() function returns the value of L_Justified_x to the power of MakeTranslate_y (L_Justified_x^MakeTranslate_y). If a third parameter is present, it returns L_Justified_x to the power of MakeTranslate_y, modulus z."
 # pow()
 print(f"\n{PowerOf_def},\n    pow(4, 3) = {pow(4, 3)}\n    pow(4, 3, 5) = {pow(4, 3, 5)}")
 
@@ -551,8 +551,8 @@ class Child(Parent):
   def __init__(self, txt):
     super().__init__(txt)
 x = Child('Hello, and welcome!')
-print(f"\n{Super_def},\n    class Parent:\n        def __init__(self, txt):\n            self.message = txt\n        def printmessage(self):\n            print(self.message)\n    class Child(Parent):\n        def __init__(self, txt):\n            super().__init__(txt)\n    x = Child('Hello, and welcome!')")
-print("print(x.printmessage()) =")
+print(f"\n{Super_def},\n    class Parent:\n        def __init__(self, txt):\n            self.message = txt\n        def printmessage(self):\n            print(self.message)\n    class Child(Parent):\n        def __init__(self, txt):\n            super().__init__(txt)\n    L_Justified_x = Child('Hello, and welcome!')")
+print("print(L_Justified_x.printmessage()) =")
 x.printmessage()
 
 
