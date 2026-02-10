@@ -8,3 +8,11 @@ import PythonShowcase_StringMethods
 print(PythonShowcase_BuiltInFunctions)
 
 
+print("\n\n\n\n\n\n\n")
+###String Methods###
+
+print(PythonShowcase_StringMethods)
+
+
+
+

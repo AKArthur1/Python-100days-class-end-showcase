@@ -296,96 +296,131 @@ print(f"\n{RFind_def}"
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
+Rindex_def = "R Index: The rindex() method finds the last occurance of the specified value, raises an exception if the value is not found. It is almost the same as the same as the rfind() method."
+Rindex_txt = 'Mi casa, su casa.'
+print(f"\n{Rindex_def}"
+      f"\n    Rindex_txt = 'Mi casa, su casa.'"
+      f"\n        print(Rindex_txt.rindex('casa')) = {Rindex_txt.rindex('casa')}")
 
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
+RJust_def = "R Just: The rjust() method will right align the string, using a specified character ( space is default) as the fill character."
+RJust_txt = 'banana'
+print(f"\n{RJust_def}"
+      f"\n    RJust_txt = 'banana'"
+      f"\n        print(RJust_txt.rjust(20, 'O')) = {RJust_txt.rjust(20, 'O')}")
 
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
+RPartition_def = "R Partition: The rpartition() method searches for the last occurance of a specified string, and splits the string into a tuple containing three elements. The first element contains the part before the specified string. The second element contains the specified string. The third element contains the part after the string."
+RPartition_txt = 'I could eat bananas all day, bananas are my favorite fruit'
+print(f"\n{RPartition_def}"
+      f"\n    RPartition_txt = 'I could eat bananas all day, bananas are my favorite fruit'"
+      f"\n        print(RPartition_txt.rpartition('bananas')) = {RPartition_txt.rpartition('bananas')}")
 
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
+RSplit_def = "R Split: The rsplit() method splits a string into a list, starting from the right. If no 'max' is specified, this method will return the same as the split() method."
+RSplit_txt = 'apple, banana, orange, cherry'
+print(f"\n{RSplit_def}"
+      f"\n    RSplit_txt = 'apple, banana, orange, cherry'"
+      f"\n        print(RSplit_txt.rsplit(', ')) = {RSplit_txt.rsplit(', ')}")
 
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
+RStrip_def = "R Strip: The rstrip() method removes any trailing characters (characters at the end of a string), space is the default trailing character to remove."
+RStrip_txt = '     banana     '
+print(f"\n{RStrip_def}"
+      f"\n    RStrip_txt = '     banana     '"
+      f"\n        print('of all Append_fruits', x, 'is my favorite') = {'of all Append_fruits', RStrip_txt.rstrip(), 'is my favorite'}")
 
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
+Split_def = "Split: The split() method splits a string into a list. You can specify the separator, default separator is any whitespace."
+Split_txt = 'apple#banana#cherry#orange'
+print(f"\n{Split_def}"
+      f"\n    Split_txt = 'apple#banana#cherry#orange'"
+      f"\n        print(Split_txt.split('#')) = {Split_txt.split('#')}")
 
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
+SplitLines_def = "Split Lines: The splitlines() method splits a string into a list. The splitting is done at line breaks."
+Split_txt = 'Thank you for the music\nWelcome to the jungle'
+print(f"\n{SplitLines_def}"
+      f"\n    Split_txt = 'Thank you for the music\nWelcome to the jungle'"
+      f"\n        print(Split_txt.splitlines(True)) = {Split_txt.splitlines(True)}")
 
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
+StartsWith_def = "Starts With: The startswith() method returns True if the string starts with the specified value, otherwise False."
+StartsWith_txt = 'Hello, welcome to my world.'
+print(f"\n{StartsWith_def}"
+      f"\n    StartsWith_txt = 'Hello, welcome to my world.'"
+      f"\n        print(StartsWith_txt.startswith('Hello')) = {StartsWith_txt.startswith('Hello')}")
 
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
+Strip_def = "Strip: The strip() method removes any leading, and trailing whitespaces. Leading means at the beginning of the string, trailing means at the end. You can specify which characters to remove, if not, any whitespaces will be removed."
+Strip_txt = '     banana     '
+print(f"\n{Strip_def}"
+      f"\n    Strip_txt = '     banana     '"
+      f"\n        print('of all Append_fruits', Strip_txt.strip(), 'is my favorite') = {'of all Append_fruits', Strip_txt.strip(), 'is my favorite'}")
 
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
+SwapCase_def = "Swap Case: The swapcase() method returns a string where all the upper case letters are lower case and vice versa."
+SwapCase_txt = 'Hello My Name Is PETER'
+print(f"\n{SwapCase_def}"
+      f"\n    SwapCase_txt = 'Hello My Name Is PETER'"
+      f"\n        print(SwapCase_txt.swapcase()) = {SwapCase_txt.swapcase()}")
 
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
+Title_def = "Title: The title() method returns a string where the first character in every word is upper case. Like a header, or a title. If the word contains a number or a symbol, the first letter after that will be converted to upper case."
+Title_txt = 'hello b2b2b2 and 3g3g3g'
+print(f"\n{Title_def}"
+      f"\n    Title_txt = 'hello b2b2b2 and 3g3g3g'"
+      f"\n        print(Title_txt.title()) = {Title_txt.title()}")
 
 
 
 
-# BLANK_DEF = ""
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {}")
-print("\n\nEnd of the Python String Methods Showcase")
+Translate_def = "Translate: The translate() method returns a string where some specified characters are replaced with the character described in a dictionary, or in a mapping table. Use the maketrans() method to create a mapping table. If a character is not specified in the dictionary/table, the character will not be replaced. If you use a dictionary, you must use ascii codes instead of characters."
+Translate_txt = 'Hello Sam!'
+Translate_mytable = str.maketrans('S', 'P')
+print(f"\n{Translate_def}"
+      f"\n    Translate_txt = 'Hello Sam!'"
+      f"\n    Translate_mytable = str.maketrans('S', 'P')"
+      f"\n        print(Translate_txt.translate(Translate_mytable)) = {Translate_txt.translate(Translate_mytable)}")
+
+
+
+
+Upper_def = "Upper: The upper() method returns a string where all characters are in upper case."
+Upper_txt = 'Hello my friends'
+print(f"\n{Upper_def}"
+      f"\n    Upper_txt = 'Hello my friends'"
+      f"\n        print(Upper_txt.upper()) = {Upper_txt.upper()}")
+
+
+
+
+ZFill_def = "ZFill: The zfill() method adds zeros (0) at the beginning of the string, until it reaches the specified length. If the value of the len parameter is less than the length of the string, no filling is done."
+ZFill_txt = '50'
+print(f"\n{ZFill_def}"
+      f"\n    ZFill_txt = '50'"
+      f"\n        print(ZFill_txt.zfill(10)) = {ZFill_txt.zfill(10)}")
+
+
+
+print("\n\n\nEnd of the Python String Methods Showcase")

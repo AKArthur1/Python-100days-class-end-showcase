@@ -210,7 +210,7 @@ print(f"\n{Float_convert_def},\n      float(3) = {float(3)}\n      float('3.500'
 
 Format_def = "Format: The format() function formats a specified value into a specified format. Reference the Format list to see the many available formatting codes."
 # format()
-print(f"\n{Format_def},\n      format(0.5, '%') = {format(0.5, '%')}\n      format(255, 'L_Justified_x') = {format(255, 'L_Justified_x')}\n      format(1234567890, ',') = {format(1234567890, ',')}")
+print(f"\n{Format_def},\n      format(0.5, '%') = {format(0.5, '%')}\n      format(255, 'x') = {format(255, 'x')}\n      format(1234567890, ',') = {format(1234567890, ',')}")
 
 
 
@@ -406,7 +406,8 @@ print(f"\n{Open_def},\n      *** This will open a file when run ***\n           
 
 Ord_def = "Ord: The ord() function returns the number representing the unicode code of a specified character."
 # ord()
-print(f"\n{Ord_def},\n    ord('h') = {ord('h')}\n    ord('MakeTranslate_y') = {ord('MakeTranslate_y')}")
+print(f"\n{Ord_def}"
+      f"\n    ord('h') = {ord('h')}")
 
 
 
