@@ -54,59 +54,66 @@ print(f"\n{Extend_def}"
 
 
 
-# DEF = ""
-#
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {BLANK}")
+Index_def = "Index: The index() method returns the position at the first occurrence of the specified value. "
+Index_fruits = ['apple', 'banana', 'cherry']
+print(f"\n{Index_def}"
+      f"\n    Index_fruits = ['apple', 'banana', 'cherry']"
+      f"\n        print(Index_fruits.index('cherry')) = {Index_fruits.index('cherry')}")
 
 
 
-# DEF = ""
-#
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {BLANK}")
+Insert_def = "Insert: The insert() method inserts the specified value at the specified position."
+Insert_fruits = ['apple', 'banana', 'cherry']
+Insert_fruits.insert(1, 'orange')
+print(f"\n{Insert_def}"
+      f"\n    Insert_fruits = ['apple', 'banana', 'cherry']"
+      f"\n    Insert_fruits.insert(1, 'orange')"
+      f"\n        print(Insert_fruits) = {Insert_fruits}")
 
 
 
-# DEF = ""
-#
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {BLANK}")
+Pop_def = "Pop: The pop() method removes the element at the specified position."
+Pop_fruits = ['apple', 'banana', 'cherry']
+Pop_fruits.pop(1)
+print(f"\n{Pop_def}"
+      f"\n    Pop_fruits = ['apple', 'banana', 'cherry']"
+      f"\n    Pop_fruits.pop(1)"
+      f"\n        print(Pop_fruits) = {Pop_fruits}")
 
 
 
-# DEF = ""
-#
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {BLANK}")
+Remove_def = "Remove: The remove() method removes the first occurance of the element with the specified value."
+Remove_fruits = ['apple', 'banana', 'cherry']
+Remove_fruits.remove('banana')
+print(f"\n{Remove_def}"
+      f"\n    Remove_fruits = ['apple', 'banana', 'cherry']"
+      f"\n    Remove_fruits.remove('banana')"
+      f"\n        print(Remove_fruits) = {Remove_fruits}")
 
 
 
-# DEF = ""
-#
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {BLANK}")
+Reverse_def = "Reverse: The reverse() method reverses the sorting order of the elements."
+Reverse_fruits = ['apple', 'banana', 'cherry']
+Reverse_fruits.reverse()
+print(f"\n{Reverse_def}"
+      f"\n    Reverse_fruits = ['apple', 'banana', 'cherry']"
+      f"\n    Reverse_fruits.reverse()"
+      f"\n        print(Reverse_fruits) = {Reverse_fruits}")
 
 
 
-# DEF = ""
-#
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {BLANK}")
 
-
-
-# DEF = ""
-#
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {BLANK}")
+Sort_def = "Sort: The sort() method sorts the list ascending by defaulft. You can also make a function to decide the sorting criteria. # A function that returns the length of the value"
+def Sort_myFunc(Sort_e):
+  return len(Sort_e)
+Sort_cars = ['Ford', 'Mitsubishi', 'BMW', 'VW']
+Sort_cars.sort(reverse=True, key=Sort_myFunc)
+print(f"\n{Sort_def}"
+      f"\n    def Sort_myFunc(Sort_e):"
+      f"\n        return len(Sort_e)"
+      f"\n    Sort_cars = ['Ford', 'Mitsubishi', 'BMW', 'VW']"
+      f"\n    Sort_cars.sort(reverse=True, key=Sort_myFunc)"
+      f"\n        print(Sort_cars) = {Sort_cars}")
 
 
 
