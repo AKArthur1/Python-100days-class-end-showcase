@@ -210,7 +210,7 @@ print(f"\n{Float_convert_def},\n      float(3) = {float(3)}\n      float('3.500'
 
 Format_def = "Format: The format() function formats a specified value into a specified format. Reference the Format list to see the many available formatting codes."
 # format()
-print(f"\n{Format_def},\n      format(0.5, '%') = {format(0.5, '%')}\n      format(255, 'FromKeys_x') = {format(255, 'FromKeys_x')}\n      format(1234567890, ',') = {format(1234567890, ',')}")
+print(f"\n{Format_def},\n      format(0.5, '%') = {format(0.5, '%')}\n      format(255, 'x') = {format(255, 'x')}\n      format(1234567890, ',') = {format(1234567890, ',')}")
 
 
 

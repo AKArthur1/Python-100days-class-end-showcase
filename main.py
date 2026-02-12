@@ -2,6 +2,8 @@
 import PythonShowcase_BuiltInFunctions
 import PythonShowcase_StringMethods
 import PythonShowcase_ListMethods
+import PythonShowcase_DictionaryMethods
+import PythonShowcase_TupleMethods
 
 
 ###Built in Functions###
@@ -18,6 +20,14 @@ print("\n\n\n\n\n\n\n")
 
 print(PythonShowcase_ListMethods)
 
+print("\n\n\n\n\n\n\n")
+###Dictionary Methods###
 
+print(PythonShowcase_DictionaryMethods)
+
+print("\n\n\n\n\n\n\n")
+###Tuple Methods###
+
+print(PythonShowcase_TupleMethods)
 
 

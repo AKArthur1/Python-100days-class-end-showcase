@@ -1,5 +1,5 @@
 ### Python Showcase Dictionary Methods ###
-# print("Beginning of the Python Dictionary Methods Showcase\n\n\n")
+print("Beginning of the Python Dictionary Methods Showcase\n\n\n")
 
 
 
@@ -60,7 +60,7 @@ print("    Get_car = {\n"
       "        'brand': 'Ford',\n"
       "        'model': 'Mustang',\n"
       "        'year': 1964\n"
-      "}")
+      "    }")
 print(f"    Get_x = Get_car.get('price', 15000)"
       f"\n        print(Get_x) = {Get_x}")
 
@@ -82,7 +82,7 @@ print("    Items_car = {\n"
       "        'brand': 'Ford',\n"
       "        'model': 'Mustang',\n"
       "        'year': 1964\n"
-      "}")
+      "     }")
 print("    Items_car['year'] = 2018"
       f"\n        print(Items_x) = {Items_x}")
 
@@ -102,7 +102,7 @@ print("    Keys_car = {"
       "\n        'brand': 'Ford',"
       "\n        'model': 'Mustang',"
       "\n        'year': 1964"
-      "\n}")
+      "\n    }")
 print(f"\n    Keys_x = Keys_car.keys()"
       f"\n    Keys_car['color'] = 'white'"
       f"\n        print(Keys_x) = {Keys_x}")
@@ -125,7 +125,7 @@ print("    Pop_car = {"
       "\n        'brand': 'Ford',"
       "\n        'model': 'Mustang',"
       "\n        'year': 1964"
-      "\n}")
+      "\n    }")
 print(f"\n    Pop_car.pop('model')"
       f"\n        print(Pop_car) = {Pop_car}")
 
@@ -135,11 +135,21 @@ print(f"\n    Pop_car.pop('model')"
 
 
 
-# DEF = ""
-#
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {BLANK}")
+PopItem_def = "PopItem: The popitem method removes the item that was last inserted into the dictionary. In versions before 3.7, the popitem() method removes a random item. The removed item is the return value of the popitem() method, as a tuple,"
+PopItem_car = {
+    'brand': 'Ford',
+    'model': 'Mustang',
+    'year': 1964
+}
+PopItem_car.popitem()
+print(f"\n{PopItem_def}")
+print("    PopItem_car = {"
+      "\n        'brand': 'Ford',"
+      "\n        'model': 'Mustang',"
+      "\n        'year': 1964"
+      "\n    }")
+print(f"    PopItem_car.popitem()")
+print(f"        print(PopItem_car) = {PopItem_car}")
 
 
 
@@ -147,11 +157,21 @@ print(f"\n    Pop_car.pop('model')"
 
 
 
-# DEF = ""
-#
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {BLANK}")
+SetDefault_def = "Set Default: The setdefault() method returns the value of the item with the specified key. If the key does not exist, insert the key, with the specified value."
+SetDefault_car = {
+    'brand': 'Ford',
+    'model': 'Mustang',
+    'year': 1964
+}
+SetDefault_x = SetDefault_car.setdefault('model', 'Bronco')
+print(f"\n{SetDefault_def}")
+print("    SetDefault_car = {"
+      "\n        'brand': 'Ford',"
+      "\n        'model': 'Mustang',"
+      "\n        'year': 1964"
+      "\n    }")
+print(f"    SetDefault_x = SetDefault_car.setdefault('model', 'Bronco'))")
+print(f"        print(SetDefault_x) = {SetDefault_x}")
 
 
 
@@ -159,11 +179,21 @@ print(f"\n    Pop_car.pop('model')"
 
 
 
-# DEF = ""
-#
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {BLANK}")
+Update_def = "Update: The update() method inserts the specified items to the dictionary. The specified items can be a dictionary, or an iterable object with key value pairs."
+Update_car = {
+    'brand': 'Ford',
+    'model': 'Mustang',
+    'year': 1964
+}
+Update_car.update({'color': 'White'})
+print(f"\n{Update_def}")
+print("    Update_car = {"
+      "\n        'brand': 'Ford',"
+      "\n        'model': 'Mustang',"
+      "\n        'year': 1964"
+      "\n    }")
+print("    Update_car.update({'color': 'White'})")
+print(f"        print(Update_car) = {Update_car}")
 
 
 
@@ -171,14 +201,24 @@ print(f"\n    Pop_car.pop('model')"
 
 
 
-# DEF = ""
-#
-# print(f"\n{DEF}"
-#       f"\n    BLANK"
-#       f"\n        print() = {BLANK}")
+Values_def = "Values: The values() returns a view object. The view object contains the values of the dictionary, as a list. The view object will reflect any changes done to the dictionary."
+Values_car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+Values_x = Values_car.values()
+print(f"\n{Values_def}")
+print("    Values_car = {"
+      "\n        'brand': 'Ford',"
+      "\n        'model': 'Mustang',"
+      "\n        'year': 1964"
+      "\n    }")
+print(f"    Values_x = Values_car.values()")
+print(f"        print(Values_x) = {Values_x}")
 
 
 
 
 
-# print("\n\n\nEnd of the Python Dictionary Methods Showcase")
+print("\n\n\nEnd of the Python Dictionary Methods Showcase")
