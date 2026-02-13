@@ -4,6 +4,7 @@ import PythonShowcase_StringMethods
 import PythonShowcase_ListMethods
 import PythonShowcase_DictionaryMethods
 import PythonShowcase_TupleMethods
+import PythonShowcase_SetMethods
 
 
 ###Built in Functions###
@@ -29,5 +30,16 @@ print("\n\n\n\n\n\n\n")
 ###Tuple Methods###
 
 print(PythonShowcase_TupleMethods)
+
+print("\n\n\n\n\n\n\n")
+###Set Methods###
+
+print(PythonShowcase_SetMethods)
+
+
+
+
+
+
 
 
