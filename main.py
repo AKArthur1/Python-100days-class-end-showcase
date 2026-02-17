@@ -6,7 +6,8 @@ import PythonShowcase_DictionaryMethods
 import PythonShowcase_TupleMethods
 import PythonShowcase_SetMethods
 import PythonShowcase_FileMethods
-
+import PythonShowcase_Keywords
+import PythonShowcase_Exceptions
 
 ###Built in Functions###
 
@@ -41,6 +42,21 @@ print("\n\n\n\n\n\n\n")
 ###File Methods###
 
 print(PythonShowcase_FileMethods)
+
+print("\n\n\n\n\n\n\n")
+### Keywords###
+
+print(PythonShowcase_Keywords)
+
+print("\n\n\n\n\n\n\n")
+### Exceptions###
+
+print(PythonShowcase_Exceptions)
+
+
+
+
+
 
 
 

@@ -551,10 +551,10 @@ class Parent:
 class Child(Parent):
   def __init__(self, txt):
     super().__init__(txt)
-x = Child('Hello, and welcome!')
+Global_x = Child('Hello, and welcome!')
 print(f"\n{Super_def},\n    class Parent:\n        def __init__(self, txt):\n            self.message = txt\n        def printmessage(self):\n            print(self.message)\n    class Child(Parent):\n        def __init__(self, txt):\n            super().__init__(txt)\n    L_Justified_x = Child('Hello, and welcome!')")
 print("print(L_Justified_x.printmessage()) =")
-x.printmessage()
+Global_x.printmessage()
 
 
 
