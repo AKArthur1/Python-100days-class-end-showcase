@@ -8,6 +8,7 @@ import PythonShowcase_SetMethods
 import PythonShowcase_FileMethods
 import PythonShowcase_Keywords
 import PythonShowcase_Exceptions
+import PythonShowcase_RequestsModule
 
 ###Built in Functions###
 
@@ -53,6 +54,10 @@ print("\n\n\n\n\n\n\n")
 
 print(PythonShowcase_Exceptions)
 
+print("\n\n\n\n\n\n\n")
+### Requests###
+
+print(PythonShowcase_RequestsModule)
 
 
 
