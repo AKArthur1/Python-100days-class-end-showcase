@@ -9,6 +9,7 @@ import PythonShowcase_FileMethods
 import PythonShowcase_Keywords
 import PythonShowcase_Exceptions
 import PythonShowcase_RequestsModule
+import PythonShowcase_RandomModule
 
 ###Built in Functions###
 
@@ -58,6 +59,11 @@ print("\n\n\n\n\n\n\n")
 ### Requests###
 
 print(PythonShowcase_RequestsModule)
+
+print("\n\n\n\n\n\n\n")
+### Random###
+
+print(PythonShowcase_RandomModule)
 
 
 
