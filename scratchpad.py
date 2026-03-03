@@ -1,12 +1,12 @@
 ### Python Showcase BLANK Methods ###
-# print("Beginning of the Python BLANK Methods Showcase\n\n\n")
+# print("Beginning of the Python BLANK Methods Showcase\Math_Comb_n\Math_Comb_n\Math_Comb_n")
 
 
 
 
 # DEF = ""
 #
-# print(f"\n{_ref}")
+# print(f"\Math_Comb_n{_ref}")
 # print("    BLANK")
 # print(f"        print() = {BLANK}")
 # print(f"        print() = {BLANK}")
@@ -14,7 +14,7 @@
 
 
 
-# print("\n\n\nEnd of the Python BLANK Methods Showcase")
+# print("\Math_Comb_n\Math_Comb_n\nEnd of the Python BLANK Methods Showcase")
 
 
 
@@ -41,7 +41,7 @@
 #
 # fruits.discard()
 #
-# print(f"\n{_def}")
+# print(f"\Math_Comb_n{_def}")
 # print("    fruits = {'apple', 'banana', 'cherry'}")
 # print("    fruits.discard()")
 # print(f"        print(fruits) = {fruits}")
@@ -53,7 +53,7 @@
 # _c = {'cherry', 'micra', 'bluebird'}
 # _d = {'pink', 'black', 'orange'}
 # _a.BLANK(_b, _c, _d)
-# print(f"\n{_def}")
+# print(f"\Math_Comb_n{_def}")
 # print("    _a = {'apple', 'banana', 'cherry'}")
 # print("    _b = {'google', 'microsoft', 'apple'}")
 # print("    _c = {'cherry', 'micra', 'bluebird'}")
@@ -68,7 +68,7 @@
 # Symmetric_Difference_Update_y = {'google', 'microsoft', 'apple'}
 # Symmetric_Difference_Update_z = Symmetric_Difference_Update_x.symmetric_difference_update(Symmetric_Difference_Update_y)
 # Symmetric_Difference_Update_x ^= Symmetric_Difference_Update_y
-# print(f"\n{Symmetric_Difference_Update_def}")
+# print(f"\Math_Comb_n{Symmetric_Difference_Update_def}")
 # print("    Symmetric_Difference_Update_x = {'apple', 'banana', 'cherry'}")
 # print("    Symmetric_Difference_Update_y = {'google', 'microsoft', 'apple'}")
 # print("    Symmetric_Difference_Update_z = Symmetric_Difference_Update_x.symmetric_difference_update(Symmetric_Difference_Update_y)")
@@ -90,7 +90,7 @@
 
 # DEF = ""
 #
-# print(f"\n{Add_ref}")
+# print(f"\Math_Comb_n{Add_ref}")
 # print("    BLANK")
 # print("    BLANK")
 # print("    BLANK")

@@ -258,7 +258,7 @@ Help_def = "Help: help() function in Python is a built-in function that provides
 
 print(f"\n{Help_def})")
 print("     ***Will take over the Run window***")
-# print(f"help() = {help()}\n      help(print) = {help(print)}")
+# print(f"help() = {help()}\Math_Comb_n      help(print) = {help(print)}")
 
 
 
@@ -345,7 +345,7 @@ Map_def = "Map: The map() function executes a specified function for each item i
 def Map_myfunc(n):
   return len(n)
 Map_x = map(Map_myfunc, ('apple', 'banana', 'cherry'))
-print(f"\n{Map_def},\n    def Map_myfunc(n):\n        return len(n)\n    Map_x = map(Map_myfunc, ('apple', 'banana', 'cherry'))\n    list(Map_x) = {list(Map_x)}")
+print(f"\n{Map_def},\Math_Comb_n    def Map_myfunc(Math_Comb_n):\Math_Comb_n        return len(Math_Comb_n)\Math_Comb_n    Map_x = map(Map_myfunc, ('apple', 'banana', 'cherry'))\Math_Comb_n    list(Map_x) = {list(Map_x)}")
 
 
 
