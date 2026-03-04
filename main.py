@@ -11,6 +11,8 @@ import PythonShowcase_Exceptions
 import PythonShowcase_RequestsModule
 import PythonShowcase_RandomModule
 import PythonShowcase_StatisticsModules
+import PythonShowcase_MathMethods
+import PythonShowcase_CMathMethods
 
 ###Built in Functions###
 
@@ -70,6 +72,16 @@ print("\n\n\n\n\n\n\n")
 ### Statistics###
 
 print(PythonShowcase_StatisticsModules)
+
+print("\n\n\n\n\n\n\n")
+### Math###
+
+print(PythonShowcase_MathMethods)
+
+print("\n\n\n\n\n\n\n")
+### CMath###
+
+print(PythonShowcase_CMathMethods)
 
 
 

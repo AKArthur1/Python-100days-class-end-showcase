@@ -1,20 +1,22 @@
 ### Python Showcase BLANK Methods ###
-# print("Beginning of the Python BLANK Methods Showcase\Math_Comb_n\Math_Comb_n\Math_Comb_n")
+# print("Beginning of the Python BLANK Methods Showcase\n\n\n")
 
 
 
 
 # DEF = ""
 #
-# print(f"\Math_Comb_n{_ref}")
+# print(f"\n{_ref}")
 # print("    BLANK")
 # print(f"        print() = {BLANK}")
 # print(f"        print() = {BLANK}")
 # print(f"        print() = {BLANK}")
+# print(f"        print() = {BLANK}")
+# print(f"        print() = {BLANK}")
 
 
 
-# print("\Math_Comb_n\Math_Comb_n\nEnd of the Python BLANK Methods Showcase")
+# print("\n\n\nEnd of the Python BLANK Methods Showcase")
 
 
 
