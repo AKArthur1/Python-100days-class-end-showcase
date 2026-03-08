@@ -1,9 +1,15 @@
 ### Morse Code Converter ###
 import csv
-from tkinter import Entry, Toplevel
+from tkinter import Entry, messagebox
 import pandas
 import tkinter
 from tkinter import scrolledtext
+from pandas.core.config_init import styler_hrules
+from prettytable import PrettyTable, HRuleStyle
+from prettytable import from_csv
+import pandas
+import numpy as np
+
 
 # Dictionary representing the morse code chart
 MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
@@ -28,7 +34,9 @@ CONVERTED_USER_TEXT = []
 PROGRAM_END = 0
 history = pandas.read_csv("MorseCodeMessageHistory.csv")
 CONVERTED_COLUMNS = ["USER_TEXT_TO_CONVERT", "CONVERTED_USER_TEXT"]
+prettytable_default = PrettyTable()
 
+# print(history)
 
 # print(USER_TEXT_TO_CONVERT
 def input_user_text():
@@ -38,16 +46,21 @@ def input_user_text():
     global USER_MESSAGE_TO_CONVERT
     # USER_MESSAGE = input("Type Message to translate into Morse Code\n").upper()
     USER_MESSAGE = conversion_text_box.get().upper()
+    USER_MESSAGE_LENGTH = 0
 
 
     for digit in USER_MESSAGE:
         digit_check = MORSE_CODE_DICT.get(digit)
-        if digit_check is not None:
-            USER_MESSAGE_TO_CONVERT += str(digit)
-        elif digit_check is None:
-            pass
+        if USER_MESSAGE_LENGTH > 7:
+            return
         else:
-            pass
+            if digit_check is not None:
+                USER_MESSAGE_TO_CONVERT += str(digit)
+                USER_MESSAGE_LENGTH += 1
+            elif digit_check is None:
+                pass
+            else:
+                pass
 
     # print(USER_MESSAGE_TO_CONVERT)
 
@@ -68,31 +81,38 @@ def digit_converter():
 
 def save_converted_message_to_history():
     """Saves converted message into the history directory"""
-    message_history_save = pandas.DataFrame([[USER_MESSAGE, CONVERTED_USER_TEXT]])
-    message_history_save.to_csv("MorseCodeMessageHistory.csv", mode="a",index=False , header=False)
+
+    with open("MorseCodeMessageHistory.csv") as quicksave:
+        message_history_save = pandas.DataFrame([[USER_MESSAGE, CONVERTED_USER_TEXT]])
+        message_history_save.to_csv("MorseCodeMessageHistory.csv", mode="a", index=False, header=False)
+        quicksave.close()
+
+
+# def read_history():
+#     post_convert_read_history = pandas.read_csv('MorseCodeMessageHistory.csv', mode='r')
 
 
 def display_conversion_result():
-    morse_code_results.config(text=f'Morse Code = {CONVERTED_USER_TEXT}')
-    user_convertable_digits_results.config(text=f'Convertable Message = {USER_MESSAGE_TO_CONVERT}')
-
+    morse_code_results.config(text=f'Morse Code: {CONVERTED_USER_TEXT}')
+    user_convertable_digits_results.config(text=f'Convertable Message: {USER_MESSAGE_TO_CONVERT}')
 
 
 
 def clear_message_history():
     """Clears Messages History CSV file"""
-    clear_history_query = input("Clear All History?\nyes or no\n")
-    if clear_history_query.lower() == "yes":
-        message_history_clear = pandas.DataFrame(columns=CONVERTED_COLUMNS)
-        message_history_clear.to_csv("MorseCodeMessageHistory.csv", index=False)
-        print("History Deleted")
-    elif clear_history_query.lower() == "no":
-        print("Returning to Previous Page")
-        return
-    else:
-        return
+    message_history_clear = pandas.DataFrame(columns=CONVERTED_COLUMNS)
+    message_history_clear.to_csv("MorseCodeMessageHistory.csv", index=False)
+    # print(history)
 
-    print(history)
+def delete_history_confirm():
+    delete_query = messagebox.askquestion('Clear Save History File ',
+                         'Clear ALL Morse Code History?')
+
+    if delete_query == 'yes':
+        clear_message_history()
+    else:
+        pass
+
 
 def clear_message():
     """Clears current message for program auto loop"""
@@ -101,47 +121,27 @@ def clear_message():
     USER_MESSAGE_TO_CONVERT = ""
     CONVERTED_USER_TEXT = []
 
-    # CONVERTED_USER_TEXT.clear()
+def clear_entry_box():
+    conversion_text_box.delete(0, tkinter.END)
+
 
 def open_history():
     """Opens CSV Message History file"""
     # print(history)
 
-def program_running():
-    """Runs Program Loop"""
-    global PROGRAM_END
-    PROGRAM_END = 1
-    while PROGRAM_END:
-        # open_history()
-        input_user_text()
-        digit_converter()
-        save_converted_message_to_history()
-        clear_message()
+# def program_running():
+#     """Runs Program Loop"""
+#     global PROGRAM_END
+#     PROGRAM_END = 1
+#     while PROGRAM_END:
+#         # open_history()
+#         input_user_text()
+#         digit_converter()
+#         save_converted_message_to_history()
+#         clear_message()
 
 
         #button press toggles PROGRAM END VARIABLE to end program
-
-
-
-
-# input_user_text()
-# digit_converter()
-# save_converted_message_to_history()
-
-# print(USER_TEXT_TO_CONVERT)
-# program_running()
-# open_history()
-# clear_message_history()
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -178,74 +178,104 @@ morse_code_results.config(padx=0, pady=10)
 
 #Buttons
 def button_exit():
-    pass
+    window.destroy()
+    # pass
 
-def button_convert():
+def button_convert_function():
     # convert = convert_var.get()
     # convert = conversion_text_box.get()
     clear_message()
     input_user_text()
     digit_converter()
     save_converted_message_to_history()
+    # read_history()
     display_conversion_result()
+    clear_entry_box()
     clear_message()
+
+
     # pass
 
-def button_view_history():
-    history_window = tkinter.Tk()
-    history_window.title('History')
-    history_window.minsize(width=200, height=600)
-    history_window.config(padx=10, pady=10)
-    # history_window.resizable(width=False, height=False)
 
-    for i, converted_columns in enumerate(CONVERTED_COLUMNS, start=0):
-        tkinter.Label(history_window, text=converted_columns).grid(row=0, column=i, padx=5)
+
+def button_view_history():
+    # read_history(mode="r")
 
     with open("MorseCodeMessageHistory.csv", "r", newline="") as MorseCodeMessageHistory:
+        MorseCodeMessageHistory.flush()
         reader = csv.reader(MorseCodeMessageHistory)
         data = list(reader)
 
-    entrieslist = []
-    for i, row in enumerate(data, start=0):
-        entrieslist.append(row[0])
-        for col in range(0, 2):
-            tkinter.Label(history_window, text=row[col]).grid(row=i, column=col)
+        ### Pretty Table ### --------------------------------------------------------------------------------------------------
+        history_prettytable = PrettyTable()
+        history_formatting = history
+        # history_prettytable.hrules(styler_hrules=all)
 
-    # Creating scrolled text
-    # area widget
-    text_area = scrolledtext.ScrolledText(history_window,
-                                          wrap=tkinter.WORD,
-                                          width=40,
-                                          height=10,
-                                          font=("Times New Roman",
-                                                15))
+        history_header = list(history.columns)
+        history_data = list(map(list, np.array(history)))
 
-    text_area.grid(column=0, pady=10, padx=10)
+        history_prettytable.field_names = history_header
+        # history_prettytable.add_rows(history)
+        for row in history_data:
+            history_prettytable.add_row(row)
+            history_prettytable.add_divider()
 
-    # Placing cursor in the text area
-    text_area.focus()
+        # print(history_prettytable)
+
+
+        # test = from_csv("MorseCodeMessageHistory.csv")
+
+        ### Pretty Table ### --------------------------------------------------------------------------------------------------
+        ### text window v02 ### -----------------------------------------------------------------------------------------------
+        root = tkinter.Tk()
+        text_area_scrollbar = tkinter.Scrollbar(root)
+        save_history_pretty = tkinter.Text(root, height=40, width=200, font=(FONT, 7))
+        text_area_scrollbar.pack(side=tkinter.RIGHT, fill=tkinter.Y)
+        # text_area.grid(column=1, pady=0, padx=0)
+        save_history_pretty.pack(side=tkinter.LEFT, fill=tkinter.Y)
+        # save_history_pretty.grid(column=0, pady=0, padx=0)
+        text_area_scrollbar.config(command=save_history_pretty.yview)
+        save_history_pretty.config(yscrollcommand=text_area_scrollbar.set, wrap=None)
+        # quote = """HAMLET: To be, or not to be--that is the question:
+        # Whether 'tis nobler in the mind to suffer
+        # The slings and arrows of outrageous fortune
+        # Or to take arms against a sea of troubles
+        # And by opposing end them. To die, to sleep--
+        # No more--and by a sleep to say we end
+        # The heartache, and the thousand natural shocks
+        # That flesh is heir to. 'Tis a consummation
+        # Devoutly to be wished."""
+        save_history_pretty.insert(tkinter.END, history_prettytable)
+        tkinter.mainloop()
+        MorseCodeMessageHistory.close()
+
+    ### text window v02 ### -----------------------------------------------------------------------------------------------
+
 
 
 def button_delete_history():
-    pass
+    clear_message_history()
+    # pass
 
 button_exit = tkinter.Button(text='EXIT',command=button_exit)
 button_exit.grid(column=2, row=6)
 # button_exit.config(padx=50, pady=50)
 
-button_convert = tkinter.Button(text='CONVERT',command=button_convert)
+button_convert = tkinter.Button(text='CONVERT', command=button_convert_function)
 button_convert.grid(column=1, row=4)
 
 button_view_history = tkinter.Button(text='View History',command=button_view_history)
 button_view_history.grid(column=0, row=4)
 
-button_delete_history = tkinter.Button(text='Delete History',command=button_delete_history)
+button_delete_history = tkinter.Button(text='Delete History',command=delete_history_confirm)
 button_delete_history.grid(column=2, row=4)
 
 
 #Entries
 conversion_text_box = Entry(width=60, bg='dark grey', fg='black')
 conversion_text_box.grid(column=1, row=3)
+
+
 
 
 

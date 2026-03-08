@@ -1,28 +1,48 @@
-import customtkinter
 import tkinter
 
-### adding GUI using CustomTKinter
+from prettytable import PrettyTable
+from prettytable import from_csv
+import pandas
+import numpy as np
 
-# Set Theme and color
-customtkinter.set_appearance_mode("System")
-customtkinter.set_default_color_theme("blue")
+history = pandas.read_csv("MorseCodeMessageHistory.csv")
+### Pretty Table ### --------------------------------------------------------------------------------------------------
+history_prettytable = PrettyTable()
+# history = pandas.read_csv("MorseCodeMessageHistory.csv")
 
+history_header = list(history.columns)
+history_data = list(map(list, np.array(history)))
 
+history_prettytable.field_names = history_header
+for row in history_data:
+    history_prettytable.add_row(row)
 
-window = customtkinter.CTk()
-window.title("Morse Code Converter")
-window.geometry('600x350')
-
-# window.minsize(width=500, height=300)
-
-
-
-my_button = customtkinter.CTkButton(master='root')
-my_button.pack(pady=80)
-
-window.mainloop()
+### Pretty Table ### --------------------------------------------------------------------------------------------------
 
 
+### text window v02 ### -----------------------------------------------------------------------------------------------
+root = tkinter.Tk()
+text_area_scrollbar = tkinter.Scrollbar(root)
+save_history_pretty = tkinter.Text(root, height=4, width=50)
+text_area_scrollbar.pack(side=tkinter.RIGHT, fill=tkinter.Y)
+# text_area.grid(column=1, pady=0, padx=0)
+save_history_pretty.pack(side=tkinter.LEFT, fill=tkinter.Y)
+# save_history_pretty.grid(column=0, pady=0, padx=0)
+text_area_scrollbar.config(command=save_history_pretty.yview)
+save_history_pretty.config(yscrollcommand=text_area_scrollbar.set)
+# quote = """HAMLET: To be, or not to be--that is the question:
+# Whether 'tis nobler in the mind to suffer
+# The slings and arrows of outrageous fortune
+# Or to take arms against a sea of troubles
+# And by opposing end them. To die, to sleep--
+# No more--and by a sleep to say we end
+# The heartache, and the thousand natural shocks
+# That flesh is heir to. 'Tis a consummation
+# Devoutly to be wished."""
+save_history_pretty.insert(tkinter.END, history_prettytable)
+tkinter.mainloop()
+
+### text window v02 ### -----------------------------------------------------------------------------------------------
 
 
 
