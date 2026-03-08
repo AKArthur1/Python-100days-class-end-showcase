@@ -48,7 +48,7 @@ print(f"\n{FromKeys_def}"
 
 
 
-Get_def = "The get() method returns the value of the item with the specified key."
+Get_def = "Get: The get() method returns the value of the item with the specified key."
 Get_car = {
     'brand': 'Ford',
     'model': 'Mustang',

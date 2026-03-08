@@ -1,3 +1,33 @@
+import customtkinter
+import tkinter
+
+### adding GUI using CustomTKinter
+
+# Set Theme and color
+customtkinter.set_appearance_mode("System")
+customtkinter.set_default_color_theme("blue")
+
+
+
+window = customtkinter.CTk()
+window.title("Morse Code Converter")
+window.geometry('600x350')
+
+# window.minsize(width=500, height=300)
+
+
+
+my_button = customtkinter.CTkButton(master='root')
+my_button.pack(pady=80)
+
+window.mainloop()
+
+
+
+
+
+
+
 ### Python Showcase BLANK Methods ###
 # print("Beginning of the Python BLANK Methods Showcase\n\n\n")
 

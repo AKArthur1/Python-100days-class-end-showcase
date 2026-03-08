@@ -103,7 +103,7 @@ print(f"\n{Reverse_def}"
 
 
 
-Sort_def = "Sort: The sort() method sorts the list ascending by defaulft. You can also make a function to decide the sorting criteria. # A function that returns the length of the value"
+Sort_def = "Sort: The sort() method sorts the list ascending by default. You can also make a function to decide the sorting criteria. # A function that returns the length of the value"
 def Sort_myFunc(Sort_e):
   return len(Sort_e)
 Sort_cars = ['Ford', 'Mitsubishi', 'BMW', 'VW']
