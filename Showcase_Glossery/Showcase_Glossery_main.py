@@ -1,18 +1,10 @@
+### Showcase Glossary ### ---------------------------------------------------------------------------------------------
+
 #Final Run Program
-import PythonShowcase_BuiltInFunctions
-import PythonShowcase_StringMethods
-import PythonShowcase_ListMethods
-import PythonShowcase_DictionaryMethods
-import PythonShowcase_TupleMethods
-import PythonShowcase_SetMethods
-import PythonShowcase_FileMethods
-import PythonShowcase_Keywords
-import PythonShowcase_Exceptions
-import PythonShowcase_RequestsModule
-import PythonShowcase_RandomModule
-import PythonShowcase_StatisticsModules
-import PythonShowcase_MathMethods
-import PythonShowcase_CMathMethods
+from Showcase_Glossery import PythonShowcase_CMathMethods, PythonShowcase_SetMethods, PythonShowcase_RequestsModule, \
+    PythonShowcase_MathMethods, PythonShowcase_TupleMethods, PythonShowcase_DictionaryMethods, \
+    PythonShowcase_StatisticsModules, PythonShowcase_Keywords, PythonShowcase_FileMethods, PythonShowcase_RandomModule, \
+    PythonShowcase_StringMethods, PythonShowcase_Exceptions, PythonShowcase_BuiltInFunctions, PythonShowcase_ListMethods
 
 ###Built in Functions###
 
